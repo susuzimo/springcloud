@@ -58,7 +58,6 @@ public class UserController {
         Future<User> queue4 =userService.getByUserIds(95);
         User user4 =queue4.get();
         System.out.println(user4);
-
         hystrixRequestContext.close();
     }
 

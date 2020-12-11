@@ -11,7 +11,12 @@
     <modules>
         <module>commons</module>
         <module>helloapi</module>
+        <module>resilience4j</module>
     </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
 
 </project>

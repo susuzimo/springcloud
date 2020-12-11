@@ -1,5 +1,6 @@
 package org.wtm.provider;
 
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +21,11 @@ public class HelloController {
     Integer port;
 
     @GetMapping("/hello")
+    @RateLimiter(name="rlA")
     public String hello(){
-        return "hello eureka"+port;
+        String s="hello eureka"+port;
+        System.out.println(new Date());
+        return s;
     }
 
     @GetMapping("/hello2")

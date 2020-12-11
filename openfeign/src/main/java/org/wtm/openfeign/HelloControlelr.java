@@ -43,7 +43,6 @@ public class HelloControlelr {
 
     @GetMapping("/hello3")
     public void hello3() throws UnsupportedEncodingException {
-
         helloService.user3(URLEncoder.encode("苏子茉","UTF-8"));
     }
 }
